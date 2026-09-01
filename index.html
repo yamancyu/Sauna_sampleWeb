@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>湯氣（ゆげ） | 町なかの、小さな蒸し場</title>
+  <meta name="description" content="架空のサウナ＆スパ施設「湯氣」のランディングページ。コーディングサンプルとして、参考イメージのみからHTML / CSS / JavaScript で制作しました。">
+
+  <!-- OGP（サンプルとして最低限） -->
+  <meta property="og:title" content="湯氣（ゆげ） | 町なかの、小さな蒸し場">
+  <meta property="og:description" content="架空のサウナ施設を題材にしたコーディングサンプルページです。">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <p class="demo-ribbon" role="note">架空の施設を題材にしたコーディングサンプルです</p>
+
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="湯氣 トップへ">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="32" height="32" focusable="false">
+            <path d="M8 27c0-4 3-5 3-9s-3-5-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M16 27c0-4 3-5 3-9s-3-5-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 27c0-4 3-5 3-9s-3-5-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">湯氣</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__label">メニュー</span>
+      </button>
+
+      <nav class="nav" id="primaryNav" aria-label="サイト内ナビゲーション">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#concept">コンセプト</a></li>
+          <li><a class="nav__link" href="#rooms">蒸し場</a></li>
+          <li><a class="nav__link" href="#flow">ととのう流れ</a></li>
+          <li><a class="nav__link" href="#price">料金</a></li>
+          <li><a class="nav__link" href="#faq">よくある質問</a></li>
+          <li><a class="nav__link nav__link--cta" href="#reserve">予約する</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__steam" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="hero__inner">
+        <p class="hero__eyebrow">SABÔ &amp; SAUNA / since 2019</p>
+        <h1 class="hero__title">町なかの、<br>小さな蒸し場。</h1>
+        <p class="hero__lead">
+          駅から歩いて4分。仕事帰りに寄れる、8席だけのサウナ。<br>
+          薪の香りと、井戸水の冷たさだけがある場所です。
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#reserve">当日枠を予約する</a>
+          <a class="btn btn--ghost" href="#concept">湯氣について</a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>営業</dt><dd>13:00 – 24:00</dd></div>
+          <div><dt>席数</dt><dd>8席（完全入替制）</dd></div>
+          <div><dt>定休</dt><dd>毎週火曜</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section class="section section--concept" id="concept">
+      <div class="section__head">
+        <p class="section__label">Concept</p>
+        <h2 class="section__title">「早く」ではなく「深く」ととのう。</h2>
+      </div>
+      <div class="concept__grid">
+        <p class="concept__body">
+          湯氣は、大型施設のような設備を持ちません。
+          あるのは、薪ストーブのセルフロウリュと、汲みたての井戸水を張った水風呂、
+          そして風の通る外気浴スペースだけ。<br><br>
+          席数を8つに絞っているのは、混雑で「ととのい」が途切れないようにするため。
+          90分の完全入替制で、あなたのペースだけが流れます。
+        </p>
+        <ul class="feature-list">
+          <li class="feature-list__item">
+            <span class="feature-list__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 3c3 4 5 6 5 10a5 5 0 0 1-10 0c0-4 2-6 5-10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-list__title">薪のセルフロウリュ</h3>
+              <p class="feature-list__text">30分に一度、スタッフがアロマ水をご用意。香りは日替わりです。</p>
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 14c3-2 4-2 7 0s4 2 7 0M5 18c3-2 4-2 7 0s4 2 7 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-list__title">井戸水の水風呂</h3>
+              <p class="feature-list__text">体感16℃前後。季節で表情が変わる、やわらかい冷たさです。</p>
+            </div>
+          </li>
+          <li class="feature-list__item">
+            <span class="feature-list__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 4v16M4 12h16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            </span>
+            <div>
+              <h3 class="feature-list__title">風の抜ける外気浴</h3>
+              <p class="feature-list__text">ととのい椅子は4脚。建物の隙間を抜ける風が心地よい設計です。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section class="section section--rooms" id="rooms">
+      <div class="section__head">
+        <p class="section__label">Rooms</p>
+        <h2 class="section__title">3つの蒸し場</h2>
+        <p class="section__desc">その日の体調で選べるよう、温度と湿度の違う部屋を用意しています。</p>
+      </div>
+      <div class="card-grid">
+        <article class="card" data-reveal>
+          <p class="card__temp"><span>90</span>℃</p>
+          <h3 class="card__title">主室 ― おもて</h3>
+          <p class="card__text">薪ストーブの正面。ロウリュの蒸気をいちばん強く感じられる、6席の主室です。</p>
+          <ul class="card__meta">
+            <li>湿度 高め</li>
+            <li>2段ベンチ</li>
+          </ul>
+        </article>
+        <article class="card" data-reveal>
+          <p class="card__temp"><span>78</span>℃</p>
+          <h3 class="card__title">静室 ― しずか</h3>
+          <p class="card__text">照明を落とした2席の小部屋。低温でじっくり温まりたい日、瞑想したい日に。</p>
+          <ul class="card__meta">
+            <li>湿度 中</li>
+            <li>フラットベンチ</li>
+          </ul>
+        </article>
+        <article class="card" data-reveal>
+          <p class="card__temp"><span>16</span>℃</p>
+          <h3 class="card__title">水風呂 ― みず</h3>
+          <p class="card__text">井戸から汲み上げたかけ流し。深さ90cmで肩まで浸かれます。バイブラなし。</p>
+          <ul class="card__meta">
+            <li>常時 かけ流し</li>
+            <li>2人用</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- FLOW（順序に意味があるため番号付き） -->
+    <section class="section section--flow" id="flow">
+      <div class="section__head">
+        <p class="section__label">Flow</p>
+        <h2 class="section__title">ととのう、5つの流れ</h2>
+        <p class="section__desc">はじめての方へ。難しく考えず、この順番をゆっくり2〜3周してみてください。</p>
+      </div>
+      <ol class="flow">
+        <li class="flow__step" data-reveal>
+          <span class="flow__num">01</span>
+          <div class="flow__body">
+            <h3 class="flow__title">からだを流す</h3>
+            <p class="flow__text">シャワーで汗と汚れを流し、水気を軽く拭き取ります。ここを丁寧にすると発汗が変わります。</p>
+          </div>
+        </li>
+        <li class="flow__step" data-reveal>
+          <span class="flow__num">02</span>
+          <div class="flow__body">
+            <h3 class="flow__title">蒸される（8〜12分）</h3>
+            <p class="flow__text">主室か静室へ。無理は禁物です。「もう少し」の一歩手前で切り上げます。</p>
+          </div>
+        </li>
+        <li class="flow__step" data-reveal>
+          <span class="flow__num">03</span>
+          <div class="flow__body">
+            <h3 class="flow__title">水風呂（1〜2分）</h3>
+            <p class="flow__text">息を吐きながら、そっと肩まで。呼吸が落ち着いたら上がります。</p>
+          </div>
+        </li>
+        <li class="flow__step" data-reveal>
+          <span class="flow__num">04</span>
+          <div class="flow__body">
+            <h3 class="flow__title">外気浴（5〜10分）</h3>
+            <p class="flow__text">ととのい椅子で目を閉じます。ここが本番。頭の奥がしずかになる瞬間を待ちます。</p>
+          </div>
+        </li>
+        <li class="flow__step" data-reveal>
+          <span class="flow__num">05</span>
+          <div class="flow__body">
+            <h3 class="flow__title">水分をとって、くり返す</h3>
+            <p class="flow__text">給水スペースの井戸水をコップ1杯。2〜3周して、最後は常温で締めます。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PRICE -->
+    <section class="section section--price" id="price">
+      <div class="section__head">
+        <p class="section__label">Price</p>
+        <h2 class="section__title">料金プラン</h2>
+        <p class="section__desc">すべて税込・レンタルタオル・館内着・アメニティ込みです。</p>
+      </div>
+      <div class="price-grid">
+        <article class="plan" data-reveal>
+          <h3 class="plan__name">ビジター</h3>
+          <p class="plan__price"><span class="plan__amount">1,800</span><span class="plan__unit">円 / 90分</span></p>
+          <ul class="plan__list">
+            <li>当日枠・予約なしでも空きがあれば利用可</li>
+            <li>タオル・館内着つき</li>
+            <li>ドリンク1杯サービス</li>
+          </ul>
+          <a class="btn btn--ghost plan__cta" href="#reserve">この枠で予約</a>
+        </article>
+        <article class="plan plan--featured" data-reveal>
+          <p class="plan__badge">いちばん人気</p>
+          <h3 class="plan__name">回数券（6回）</h3>
+          <p class="plan__price"><span class="plan__amount">9,000</span><span class="plan__unit">円 / 6回</span></p>
+          <ul class="plan__list">
+            <li>1回あたり1,500円（有効期限4か月）</li>
+            <li>フェイスタオル進呈</li>
+            <li>予約を1週間前から確保できます</li>
+          </ul>
+          <a class="btn btn--primary plan__cta" href="#reserve">回数券を選ぶ</a>
+        </article>
+        <article class="plan" data-reveal>
+          <h3 class="plan__name">月ぎめ</h3>
+          <p class="plan__price"><span class="plan__amount">7,800</span><span class="plan__unit">円 / 月</span></p>
+          <ul class="plan__list">
+            <li>期間中は何度でも利用可</li>
+            <li>マイロッカー1つ無料</li>
+            <li>同伴者は毎回500円引き</li>
+          </ul>
+          <a class="btn btn--ghost plan__cta" href="#reserve">月ぎめで通う</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--faq" id="faq">
+      <div class="section__head">
+        <p class="section__label">FAQ</p>
+        <h2 class="section__title">よくある質問</h2>
+      </div>
+      <div class="faq" id="faqList">
+        <div class="faq__item">
+          <h3>
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+              サウナがはじめてでも大丈夫ですか？
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="faq__answer" id="faq-a1" role="region" aria-labelledby="faq-q1" hidden>
+            <p>はい。受付で「はじめてです」とお伝えください。スタッフが入り方を1分ほどご案内します。無理のない時間の目安もお渡ししています。</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3>
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+              タオルや着替えは必要ですか？
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="faq__answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden>
+            <p>フェイスタオル・バスタオル・館内着はすべて料金に含まれています。お持ちいただくのは着替えの下着くらいで大丈夫です。</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3>
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+              予約はどこからできますか？
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden>
+            <p>このページ下部の予約フォーム、またはお電話（10:00〜19:00）で承ります。当日枠は空きがあれば予約なしでもご利用いただけます。</p>
+          </div>
+        </div>
+        <div class="faq__item">
+          <h3>
+            <button type="button" class="faq__question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+              入れ墨・タトゥーがあっても利用できますか？
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+          </h3>
+          <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden>
+            <p>個室的な小規模施設のため、ワンポイントサイズであればカバーシールなしでご利用いただけます。広範囲の場合は貸切枠をご案内しています。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVE / CTA -->
+    <section class="section section--reserve" id="reserve">
+      <div class="reserve__panel">
+        <div class="reserve__head">
+          <p class="section__label">Reserve</p>
+          <h2 class="section__title">予約する</h2>
+          <p class="section__desc">
+            ※このフォームはサンプルです。送信ボタンを押すと、画面上で完了メッセージが表示されるだけで、実際の送信は行われません。
+          </p>
+        </div>
+        <form class="form" id="reserveForm" novalidate>
+          <div class="form__row">
+            <label class="form__label" for="name">お名前<span class="form__req">必須</span></label>
+            <input class="form__input" type="text" id="name" name="name" autocomplete="name" required>
+            <p class="form__error" data-error-for="name" hidden></p>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="email">メールアドレス<span class="form__req">必須</span></label>
+            <input class="form__input" type="email" id="email" name="email" autocomplete="email" required>
+            <p class="form__error" data-error-for="email" hidden></p>
+          </div>
+          <div class="form__row form__row--split">
+            <div>
+              <label class="form__label" for="date">ご希望日<span class="form__req">必須</span></label>
+              <input class="form__input" type="date" id="date" name="date" required>
+              <p class="form__error" data-error-for="date" hidden></p>
+            </div>
+            <div>
+              <label class="form__label" for="plan">プラン</label>
+              <select class="form__input" id="plan" name="plan">
+                <option value="visitor">ビジター（1,800円 / 90分）</option>
+                <option value="ticket">回数券（6回）</option>
+                <option value="monthly">月ぎめ</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="message">ご要望（任意）</label>
+            <textarea class="form__input" id="message" name="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn--primary form__submit" type="submit">予約内容を送信する</button>
+          <p class="form__done" id="formDone" role="status" hidden>ご予約ありがとうございます。確認メールをお送りしました。（※サンプル表示です）</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <span class="brand__name">湯氣</span>
+        <p>町なかの、小さな蒸し場。</p>
+      </div>
+      <dl class="site-footer__info">
+        <div><dt>住所</dt><dd>東京都◯◯区◯◯ 1-2-3（架空）</dd></div>
+        <div><dt>電話</dt><dd>03-0000-0000</dd></div>
+        <div><dt>営業</dt><dd>13:00 – 24:00 / 火曜定休</dd></div>
+      </dl>
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <a href="#concept">コンセプト</a>
+        <a href="#rooms">蒸し場</a>
+        <a href="#price">料金</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#reserve">予約</a>
+      </nav>
+    </div>
+    <p class="site-footer__copy">
+      <small>&copy; <span id="year"></span> 湯氣（架空）. This page is a coding sample.</small>
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
